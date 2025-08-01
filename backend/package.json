@@ -6,8 +6,9 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "build": "npm run build:functions",
-    "build:functions": "netlify-lambda build netlify/functions",
+    "clean": "rimraf functions-build",
+    "build": "npm run clean && npm run build:functions",
+    "build:functions": "netlify-lambda build netlify/functions --config ./webpack.functions.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -20,6 +21,8 @@
   },
   "devDependencies": {
     "netlify-lambda": "^2.0.16",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "rimraf": "^5.0.1",
+    "webpack": "^5.88.2"
   }
 }

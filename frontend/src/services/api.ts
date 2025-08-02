@@ -1,10 +1,10 @@
-import axios from 'axios'
+// import axios from 'axios'
 
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001/api';
+// const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001/api';
 
-const Internsdata = await axios.get(`${API_BASE_URL}/intern`);
-const mockInterns: Intern[] = Internsdata.data;
+// const Internsdata = await axios.get(`${API_BASE_URL}/intern`);
+// const mockInterns: Intern[] = Internsdata.data;
 
 // Mock API service - Replace with actual backend calls
 export interface Intern {
@@ -28,7 +28,7 @@ export interface Reward {
 }
 
 // Mock data
-/* const mockInterns: Intern[] = [
+const mockInterns: Intern[] = [
   {
     id: '1',
     name: 'Sarah Johnson',
@@ -79,7 +79,7 @@ export interface Reward {
     joinDate: '2024-02-15',
     avatar: 'https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
   }
-]; */
+];
 
 const mockRewards: Reward[] = [
   {
